@@ -31,11 +31,11 @@ def object_references(graph):
                 return "failed at" + str(edge)
     return "object references test passed"
 
-def run_tests():
+def run_tests(filepath):
     """
     runs all the tests for the program
     """
-    generator = GraphGenerator('graph.txt')
+    generator = GraphGenerator(filepath)
     graph = generator.graph_from_text_file()
     # test for object references in original graph
 
@@ -83,3 +83,34 @@ def run_tests():
 
     print "*****************************************"
     print_dfs_components(dfs_2.dfs_forest)
+
+
+def test1():
+    """
+    Uses graph.txt as input
+    """
+    run_tests('graph.txt')
+
+def test2():
+    """
+    Uses sample_graph_1.txt as input
+    """
+    run_tests('sample_graph_1.txt')
+
+def test3():
+    """
+    Uses sample_graph_2.txt as input
+    """
+    run_tests('sample_graph_2.txt')
+
+def test4():
+    """
+    Uses sample_graph_3.txt as input
+    """
+    run_tests('sample_graph_3.txt')
+
+def test5():
+    """
+    Uses sample_graph_4.txt as input
+    """
+    run_tests('sample_graph_4.txt')

@@ -20,11 +20,3 @@ class VertexBase(object):
 
     def __str__(self):
         return self.val
-
-    # def __eq__(self, other):
-    #     return self.val == other
-
-    # def __hash__(self):
-    #     #TODO: check why hashing of the vertex objects is not
-    #     # working as expected
-    #     return hash(self.val)
